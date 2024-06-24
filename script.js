@@ -4,14 +4,13 @@ const fileInput = document.getElementById('fileInput');
 const playPauseButton = document.getElementById('playPauseButton');
 const backButton = document.getElementById('backButton');
 const nextButton = document.getElementById('nextButton');
-const repeatButton = document.getElementById('repeatButton'); // Add this line
+const repeatButton = document.getElementById('repeatButton'); 
 
 let currentSongIndex = 0;
 let isPlaying = false;
 let isRepeat = false;
 let songList = [];
 
-// Add event listener to file input for song uploads
 fileInput.addEventListener('change', handleFiles);
 
 function handleFiles(event) {
@@ -63,10 +62,10 @@ function previousSong() {
 function toggleRepeat() {
     isRepeat = !isRepeat;
     audioPlayer.loop = isRepeat;
-    repeatButton.classList.toggle('active', isRepeat); // Update the button's appearance
+    repeatButton.classList.toggle('active', isRepeat); 
 }
 
-// Highlight the current song in the playlist
+
 function updatePlaylistHighlight() {
     const playlistItems = playlist.querySelectorAll('li');
     playlistItems.forEach((item, index) => {
@@ -78,7 +77,6 @@ function updatePlaylistHighlight() {
     });
 }
 
-// Event listener to handle the end of a song
 audioPlayer.addEventListener('ended', () => {
     if (isRepeat) {
         playSong();
@@ -87,8 +85,8 @@ audioPlayer.addEventListener('ended', () => {
     }
 });
 
-// Add event listeners for play/pause, back, next, and repeat buttons
+
 playPauseButton.addEventListener('click', togglePlay);
 backButton.addEventListener('click', previousSong);
 nextButton.addEventListener('click', nextSong);
-repeatButton.addEventListener('click', toggleRepeat); // Add this line
+repeatButton.addEventListener('click', toggleRepeat);
