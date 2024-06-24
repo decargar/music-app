@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #698bbfa0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main {
+    background-image: url('../music-app/IMG/m-removebg-preview\ \(1\).png');
+    max-width: 400px;
+    min-height: 300px;
+    padding: 30px;
+    border: #bdc3c7 5px solid;
+    background-color: #333;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.playlist {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    background-color: #0842f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.playlist li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+    background-color: #1a1aa6;
+}
+
+.playing {
+    font-weight: bold;
+    color: #3498db;
+}
+
+#audioPlayer {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button.active {
+    background-color: #1abc9c;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
